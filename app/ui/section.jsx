@@ -4,7 +4,7 @@ import { Calendar, Clock, MapPin, Bell, ArrowRight } from "lucide-react";
 export default function MonthlyProgram() {
   const program = {
     title: "Commanding the Month",
-    date: "February 27, 2026",
+    date: "February 20, 2026",
     time: "10:00 PM (Vigil)",
     location: "Main Sanctuary & Online",
     description: "An atmospheric night of prophetic prayer and worship to usher in the new month."
