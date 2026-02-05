@@ -6,9 +6,9 @@ export default function GivingPage() {
   const [copied, setCopied] = useState(false);
 
   const accountDetails = {
-    bank: "Zenith Bank",
-    name: "Grace Church Ministry",
-    number: "1234567890",
+    bank: " Zenith Bank PLC",
+    name: "Chrysolite Interdenominational Fellowship",
+    number: "1219115985",
   };
 
   const copyToClipboard = () => {
@@ -88,10 +88,9 @@ export default function GivingPage() {
             </p>
           </div>
 
-          {/* 3. Online/Card Giving Sidebar */}
-          <div className="space-y-6">
+          {/* <div className="space-y-6">
             <div className="bg-blue-600 rounded-[2.5rem] p-8 text-white shadow-2xl shadow-blue-600/20 relative overflow-hidden group">
-              {/* Decorative Circle */}
+    
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full group-hover:scale-110 transition-transform duration-500" />
               
               <div className="bg-white/10 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 border border-white/20">
@@ -119,7 +118,7 @@ export default function GivingPage() {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>

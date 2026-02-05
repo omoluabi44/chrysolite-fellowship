@@ -23,7 +23,7 @@ export default function ContactPage() {
         { 
             name: "Facebook", 
             icon: <Facebook size={18} className="text-white" />, 
-            href: "#", 
+            href: "https://www.facebook.com/profile.php?id=61571589394190&mibextid=ZbWKwL", 
             brandClass: "bg-[#1877F2] hover:bg-[#166fe5]" 
         },
         { 

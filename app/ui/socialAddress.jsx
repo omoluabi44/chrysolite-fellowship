@@ -8,11 +8,11 @@ export default function ChurchFooter() {
   );
 
   const socials = [
-    {name: "Facebook", icon: <Facebook size={20} />, href: "#", hover: "hover:bg-[#1877F2]"},
-    {name: "Instagram", icon: <Instagram size={20} />, href: "https://www.instagram.com/cif_ibeju_lekki", hover: "hover:bg-[#E4405F]"},
-    {name: "Youtube", icon: <Youtube size={20} />, href: "https://youtube.com/@chrysolite_cif", hover: "hover:bg-[#FF0000]"},
-    {name: "Twitter", icon: <Twitter size={20} />, href: "https://x.com/CIF_IBEJU_LEKKI", hover: "hover:bg-[#1DA1F2]"},
-    {name: "TikTok", icon: <TikTokIcon />, href: "https://www.tiktok.com/@chrysolite.fellow", hover: "hover:bg-[#1DA1F2]"},
+    {name: "Facebook", icon: <Facebook size={20} />, href: "https://www.facebook.com/profile.php?id=61571589394190&mibextid=ZbWKwL", hover: "bg-[#1877F2]"},
+    {name: "Instagram", icon: <Instagram size={20} />, href: "https://www.instagram.com/cif_ibeju_lekki", hover: "bg-[#E4405F]"},
+    {name: "Youtube", icon: <Youtube size={20} />, href: "https://youtube.com/@chrysolite_cif", hover: "bg-[#FF0000]"},
+    {name: "Twitter", icon: <Twitter size={20} />, href: "https://x.com/CIF_IBEJU_LEKKI", hover: "bg-[#1DA1F2]"},
+    {name: "TikTok", icon: <TikTokIcon />, href: "https://www.tiktok.com/@chrysolite.fellow", hover: "bg-[#1DA1F2]"},
   ];
 
 
@@ -36,7 +36,7 @@ export default function ChurchFooter() {
                 aria-label={social.name}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-50 text-slate-400 transition-all duration-300 ${social.hover} hover:text-white hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10`}
+                className={`group flex items-center gap-3 px-6 py-3 rounded-2xl  text-slate-400 transition-all duration-300 ${social.hover} text-white hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10`}
               >
                 {social.icon}
                 <span className="text-sm font-bold tracking-wide uppercase">{social.name}</span>

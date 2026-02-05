@@ -3,7 +3,7 @@ import { Calendar, Clock, MapPin, Bell, ArrowRight } from "lucide-react";
 
 export default function MonthlyProgram() {
   const program = {
-    title: "Commanding the Month",
+    title: "Intimacy Praise Night",
     date: "February 20, 2026",
     time: "10:00 PM (Vigil)",
     location: "Main Sanctuary & Online",
@@ -17,7 +17,7 @@ export default function MonthlyProgram() {
         {/* Header Area */}
         <div className="text-center mb-16">
           <span className="text-blue-600 font-bold tracking-[0.2em] uppercase text-xs">
-            Monthly Prophetic Service
+            Monthly Praise Night
           </span>
           <h2 className="mt-4 text-4xl md:text-5xl font-light text-slate-900 tracking-tight">
             {program.title}

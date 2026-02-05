@@ -6,7 +6,7 @@ const sermons = [
   {
     id: "1",
     title: "Walking in Divine Purpose",
-    speaker: "Pastor John Doe",
+    speaker: "Pastor Happy Adese",
     date: "Jan 25, 2026",
     thumbnail: "https://img.youtube.com/vi/e7jo3oHcKU8/maxresdefault.jpg",
     category: "Worship"
