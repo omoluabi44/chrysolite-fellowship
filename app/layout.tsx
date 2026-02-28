@@ -12,9 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Update the metadata object here
 export const metadata: Metadata = {
   title: "Chrysolite Fellowship",
-  description: "Chrysolite Fellowship",
+  description: "Chrysolite Interdenominational Fellowship - Raising believers firm in faith.",
+  verification: {
+    google: "Vq1U423QHJRrMdneMcvGhJH4DvvC2I_jJleiIl85KlU",
+  },
 };
 
 export default function RootLayout({
@@ -24,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
