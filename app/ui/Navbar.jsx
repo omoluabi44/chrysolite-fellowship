@@ -1,45 +1,41 @@
 "use client";
-import {useState} from "react";
+import { useState } from "react";
 import Link from "next/link";
 import DonateButton from "@/app/ui/donate"
-import ChurchLogo from  "@/app/ui/logo"
+import ChurchLogo from "@/app/ui/logo"
 
 export default function ChurchNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    {name: "ABOUT", href: "/about"},
-      {name: "CONTACT", href: "/contact"},
-  ];
-
   return (
-    <nav className="fixed w-full z-50 top-0 left-0 bg-white/80 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-
-          <ChurchLogo/>
-
-          {/* 2. Desktop Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-sm font-bold text-blue-600 hover:text-blue-600 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full"
-              >
-                {link.name}
-              </Link>
-            ))}
-
-            {/* CTA Button */}
-            <DonateButton />
+    <nav className="fixed w-full z-[100] top-0 left-0 bg-white border-b border-gray-100 h-16 md:h-20">
+      <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-full">
+          
+          {/* LOGO: min-w-0 and flex-1 allows it to shrink so it doesn't push the button off */}
+          <div className="flex-1 min-w-0">
+            <Link href="/" className="inline-block max-w-full">
+              <ChurchLogo />
+            </Link>
           </div>
 
-          {/* 3. Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          {/* RIGHT SIDE: Action Area */}
+          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center space-x-8 mr-8">
+              <Link href="/about" className="text-sm font-bold text-slate-700 hover:text-blue-600">ABOUT</Link>
+              <Link href="/contact" className="text-sm font-bold text-slate-700 hover:text-blue-600">CONTACT</Link>
+            </div>
+
+            {/* Donate Button - Scales down on mobile to prevent cutoff */}
+            <div className="scale-90 xs:scale-100">
+               <DonateButton />
+            </div>
+
+            {/* Hamburger Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 hover:text-slate-900 focus:outline-none"
+              className="md:hidden p-1 text-slate-600"
             >
               <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -53,25 +49,11 @@ export default function ChurchNavbar() {
         </div>
       </div>
 
-      {/* 4. Mobile Menu Overlay */}
-      <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100 py-6' : 'max-h-0 opacity-0 overflow-hidden'} bg-white border-b border-gray-100`}>
-        <div className="px-4 space-y-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block text-lg font-medium text-slate-700 hover:text-blue-600"
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Link
-            href="/donate"
-            className="block text-center bg-blue-600 text-white px-6 py-3 rounded-xl font-bold"
-          >
-            Donate
-          </Link>
+      {/* Mobile Menu Overlay */}
+      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-white border-b border-gray-100`}>
+        <div className="px-4 py-6 space-y-4">
+          <Link href="/about" className="block text-lg font-bold">ABOUT</Link>
+          <Link href="/contact" className="block text-lg font-bold">CONTACT</Link>
         </div>
       </div>
     </nav>
